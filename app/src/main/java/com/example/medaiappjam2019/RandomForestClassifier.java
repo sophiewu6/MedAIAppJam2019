@@ -1,5 +1,7 @@
 package com.example.medaiappjam2019;
 
+import android.util.Log;
+
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 
@@ -76,11 +78,12 @@ class RandomForestClassifier {
             String modelData = args[0];
 
             // Estimator:
+            Log.d("output","in");
             RandomForestClassifier clf = new RandomForestClassifier(modelData);
 
             // Prediction:
             int prediction = clf.predict(features);
-            System.out.println(prediction);
+            Log.d("output",Double.toString(prediction));
 
         }
     }
