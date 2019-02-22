@@ -10,10 +10,10 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        String[] temp = {"C:\\Users\\ShiYu Qiu\\StudioProjects\\MedAIAppJam2019\\app\\src\\main\\assets\\data.json","2"};
+        double[] temp = {0.5,0.5,0.5,0.5,0.5};
         try {
             Log.d("output","starting main");
-            RandomForestClassifier.main(temp);
+            Log.d("output",Integer.toString(DecisionTreeClassifier.predict(temp)));
         }catch (Exception ex){
             Log.d("output", "OPS ..."+ex);
         }
